@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <title>Escapate!</title>
+</head>
+<body class="row justify-content-md-center align-items-center">
+<div id="video" class="container">
+    <!-- Copy & Pasted from YouTube -->
+    <iframe src="https://www.youtube.com/embed/PEUlPBgWDRo" title="EscapeRoom" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;  " ></iframe>
+</div>
+<div class="card" style="width: min-content;">
+    <div class="card-body">
+        <h5 class="card-title">Introduce el año del futuro, desde donde viene el mensaje</h5>
+        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-secondary" id="0" value="7" onclick="darNumero('0')">0</button>
+                <button type="button" class="btn btn-outline-secondary" id="1" value="1" onclick="darNumero('1')">1</button>
+                <button type="button" class="btn btn-outline-secondary" id="2" value="2" onclick="darNumero('2')">2</button>
+                <button type="button" class="btn btn-outline-secondary" id="3" value="3" onclick="darNumero('3')">3</button>
+                <button type="button" class="btn btn-outline-secondary" id="4" value="4" onclick="darNumero('4')">4</button>
+                <button type="button" class="btn btn-outline-secondary" id="5" value="5" onclick="darNumero('5')">5</button>
+                <button type="button" class="btn btn-outline-secondary" id="6" value="6" onclick="darNumero('6')">6</button>
+                <button type="button" class="btn btn-outline-secondary" id="7" value="7" onclick="darNumero('7')">7</button>
+                <button type="button" class="btn btn-outline-secondary" id="8" value="7" onclick="darNumero('8')">8</button>
+                <button type="button" class="btn btn-outline-secondary" id="9" value="7" onclick="darNumero('9')">9</button>
+            </div>
+        </div>
+        <div class="card-text" id="respuesta">....</div>
+    </div>
+</div>
+
+
+
+<div id="feito" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Reto conseguido!</h5>
+            </div>
+            <div class="modal-body">
+                <a href="reto01.html">Siguiente reto</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="nonfeito" class="modal fade" id="nonexampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="nonexampleModalLabel">Reto Non Conseguido!</h5>
+            </div>
+            <div class="modal-body">
+                 Vuélvelo a intentar.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/presentacion.js"></script>
+
+</body>
+</html>

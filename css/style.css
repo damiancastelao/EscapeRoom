@@ -1,0 +1,24 @@
+html {
+    background: url("https://i.promecal.es/IMG/2020/2DEDA121-95B9-36FD-3AA33A9412F55C23.JPG") no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+
+.row {
+    background: transparent;
+}
+
+.card {
+    background-color: #fffc;
+}
+
+.container {
+    width: 80%;
+    padding: 1%;
+    margin:0px auto;
+    background:#ccc293;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.5);
+}
+
