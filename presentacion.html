@@ -17,7 +17,7 @@
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
 
     <!-- Fontaweson -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a58f7ab066.js" crossorigin="anonymous"></script>
 
     <title>Escapate!</title>
 </head>
@@ -25,24 +25,15 @@
 
 <video
         id="my-video"
-        class="video-js"
-        controls
+        autoplay="autoplay"
+        controls="controls"
         preload="auto"
         height="540"
+        width="90%"
         data-setup="{}"
 >
     <source src="videos/presentacion.mp4" type="video/mp4" />
-    <p class="vjs-no-js">
-        To view this video please enable JavaScript, and consider upgrading to a
-        web browser that
-        <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-        >
-    </p>
 </video>
-
-<script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-
 
 <div class="card" style="width: min-content;">
     <div class="card-body">
@@ -57,12 +48,26 @@
                 <button type="button" class="btn btn-outline-secondary" id="5" value="5" onclick="darNumero('5')">5</button>
                 <button type="button" class="btn btn-outline-secondary" id="6" value="6" onclick="darNumero('6')">6</button>
                 <button type="button" class="btn btn-outline-secondary" id="7" value="7" onclick="darNumero('7')">7</button>
-                <button type="button" class="btn btn-outline-secondary" id="8" value="7" onclick="darNumero('8')">8</button>
-                <button type="button" class="btn btn-outline-secondary" id="9" value="7" onclick="darNumero('9')">9</button>
+                <button type="button" class="btn btn-outline-secondary" id="8" value="8" onclick="darNumero('8')">8</button>
+                <button type="button" class="btn btn-outline-secondary" id="9" value="9" onclick="darNumero('9')">9</button>
             </div>
         </div>
-        <div class="card-text" id="respuesta">....</div>
-        <div class="card-text" id="retosConseguidos">-----<i class="fas fa-check"></i></div>
+        <h5 class="card-title">Respuesta:
+            <span id="respuesta1" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>
+            <span id="respuesta2" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>
+            <span id="respuesta3" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>
+            <span id="respuesta4" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>
+        </h5>
+        <h5 class="card-title">Retos Conseguidos:</h5>
+        <h5 class="card-title">
+            <span id="reto0" class=" btn btn-outline-secondary">0</span>
+            <span id="reto1" class=" btn btn-outline-secondary">1</span>
+            <span id="reto2" class=" btn btn-outline-secondary">2</span>
+            <span id="reto3" class=" btn btn-outline-secondary">3</span>
+            <span id="reto4" class=" btn btn-outline-secondary">4</span>
+            <span id="reto5" class=" btn btn-outline-secondary">5</span>
+            <span id="reto6" class=" btn btn-outline-secondary">6</span>
+        </h5>
     </div>
 </div>
 <div id="feito" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

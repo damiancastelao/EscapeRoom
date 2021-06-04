@@ -6,8 +6,12 @@ html {
     -o-background-size: cover;
 }
 
-.row {
+body {
     background: transparent;
+}
+
+.row {
+
 }
 
 .card {
