@@ -47,7 +47,8 @@ function darNumero(numero){
  */
 function actualizar(reto){
     // cargamos el video nuevo
-    myVideo.setAttribute('src', videos[reto])
+    myVideo.setAttribute('src', videos[reto]);
+    myVideo.setAttribute('poster', 'images/'+retoActual+'.png');
     // texto del reto
     $('#msg')[0].innerHTML = msgRetos[reto];
     // botonera del reto
