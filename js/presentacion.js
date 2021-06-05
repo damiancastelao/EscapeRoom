@@ -4,19 +4,24 @@ var contador = 0;
 var myVideo = document.getElementById('my-video');
 
 var videos = ['videos/presentacionInsta.mp4','videos/reto.mp4'];
+var botones = []
 var retoActual = 0;
 var respuestasCorrectas = ['3023','6666','5555','4444','3333'];
-var retoConseguido = ['0', '0'];
+var retoConseguido = ['0', '0', '0', '0', '0'];
 var msgRetos = ['Introduce el año del futuro, desde donde viene el mensaje','El número de la bestia','wuow','guau','yeah'];
 //'<i class="fas fa-check"></i>';
 var checkReto = '<i class="fas fa-skull-crossbones"></i>';
 function darNumero(numero){
     respuesta = respuesta + numero;
     contador++;
-    // rellenamos la respuesta segun vayan pulsando los otones
+    // rellenamos la respuesta segun vayan pulsando los botones
     $('#respuesta'+contador)[0].innerText = numero;
-    console.log("Año: " + respuesta + " contador: " + contador);
+
+    // debug
+    console.log("Respuesta: " + respuesta + " contador: " + contador);
+
     if (contador>=4 && respuesta==respuestasCorrectas[retoActual]) {
+        // Respuesta Correcta
         $('#feito').modal('show');
         // check
         $('#reto'+retoActual)[0].innerHTML = checkReto;
