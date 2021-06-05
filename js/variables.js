@@ -1,6 +1,7 @@
-var videos = ['videos/presentacion.mp4',''];
+var videos = ['videos/presentacion.mp4','','','',''];
 
-var botonesNumeros = '<button type="button" class="btn btn-outline-secondary" id="0" value="0" onclick="darNumero(\'0\')">0</button>\n' +
+var botonesNumeros =
+    '<button type="button" class="btn btn-outline-secondary" id="0" value="0" onclick="darNumero(\'0\')">0</button>\n' +
     '<button type="button" class="btn btn-outline-secondary" id="1" value="1" onclick="darNumero(\'1\')">1</button>\n' +
     '<button type="button" class="btn btn-outline-secondary" id="2" value="2" onclick="darNumero(\'2\')">2</button>\n' +
     '<button type="button" class="btn btn-outline-secondary" id="3" value="3" onclick="darNumero(\'3\')">3</button>\n' +
@@ -28,12 +29,6 @@ var botonera = [
     botonesNumeros,
 ];
 
-/*
-'<span id="respuesta1" className=" btn btn-outline-secondary"><i className="fas fa-question"></i></span>' +
-    '<span id="respuesta2" className=" btn btn-outline-secondary"><i className="fas fa-question"></i></span>' +
-    '<span id="respuesta3" className=" btn btn-outline-secondary"><i className="fas fa-question"></i></span>' +
-    '<span id="respuesta4" className=" btn btn-outline-secondary"><i className="fas fa-question"></i></span>'
- */
 var botoneraRespuesta = [
     '<span id="respuesta1" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>' +
     '<span id="respuesta2" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>' +

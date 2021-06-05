@@ -16,61 +16,53 @@
     <!-- Video play -->
     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
 
-    <title>Ultimo!</title>
+    <!-- Fontaweson -->
+    <script src="https://kit.fontawesome.com/a58f7ab066.js" crossorigin="anonymous"></script>
+
+    <title>Escapate!</title>
 </head>
 <body class="row justify-content-md-center align-items-center">
-<style>
-   #my-video{display:none;}
-</style>
+
 <video
         id="my-video"
-        class="video-js"
-        controls
+        autoplay="autoplay"
+        controls="controls"
         preload="auto"
         height="540"
+        width="90%"
         data-setup="{}"
 >
-    <source src="videos/reto.mp4" type="video/mp4" />
-    <p class="vjs-no-js">
-        To view this video please enable JavaScript, and consider upgrading to a
-        web browser that
-        <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-        >
-    </p>
+    <source src="videos/presentacion.mp4" type="video/mp4" />
 </video>
 
-<script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-
-
-<div class="card" style="width: min-content;">
+<div class="card" style="width: auto;">
     <div class="card-body">
-        <h5 class="card-title">Introduce clave para desbloquear último reto</h5>
+        <h5 id="msg" class="card-title"><!-- cargado por js --></h5>
         <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-secondary" id="0" value="7" onclick="darNumero('0')">0</button>
-                <button type="button" class="btn btn-outline-secondary" id="1" value="1" onclick="darNumero('1')">1</button>
-                <button type="button" class="btn btn-outline-secondary" id="2" value="2" onclick="darNumero('2')">2</button>
-                <button type="button" class="btn btn-outline-secondary" id="3" value="3" onclick="darNumero('3')">3</button>
-                <button type="button" class="btn btn-outline-secondary" id="4" value="4" onclick="darNumero('4')">4</button>
-                <button type="button" class="btn btn-outline-secondary" id="5" value="5" onclick="darNumero('5')">5</button>
-                <button type="button" class="btn btn-outline-secondary" id="6" value="6" onclick="darNumero('6')">6</button>
-                <button type="button" class="btn btn-outline-secondary" id="7" value="7" onclick="darNumero('7')">7</button>
-                <button type="button" class="btn btn-outline-secondary" id="8" value="7" onclick="darNumero('8')">8</button>
-                <button type="button" class="btn btn-outline-secondary" id="9" value="7" onclick="darNumero('9')">9</button>
+            <div id="botonera" class="btn-group me-2" role="group" aria-label="First group">
+                <!-- cargado por js -->
             </div>
         </div>
-        <div class="card-text" id="respuesta">....</div>
+        <h5 class="card-title">Respuesta:
+            <div id="botonerarespuesta" class="card-title">
+                <!-- cargado por js -->
+            </div>
+        </h5>
+        <h5 class="card-title">Retos Conseguidos:</h5>
+        <h5 class="card-title">
+            <span id="reto0" class=" btn btn-outline-secondary">1</span>
+            <span id="reto1" class=" btn btn-outline-secondary">2</span>
+            <span id="reto2" class=" btn btn-outline-secondary">3</span>
+            <span id="reto3" class=" btn btn-outline-secondary">4</span>
+            <span id="reto4" class=" btn btn-outline-secondary">5</span>
+        </h5>
     </div>
 </div>
 <div id="feito" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Reto conseguido!</h5>
-            </div>
-            <div class="modal-body">
-                <a href="reto01.html">Siguiente reto</a>
+                <h5 class="modal-title" id="exampleModalLabel">Escape room CONSEGUIDO!</h5>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -95,6 +87,7 @@
 </div>
 </div>
 
+<script src="js/variables.js"></script>
 <script src="js/ultimo.js"></script>
 
 </body>
