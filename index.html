@@ -35,28 +35,18 @@
     <source src="videos/presentacion.mp4" type="video/mp4" />
 </video>
 
-<div class="card" style="width: min-content;">
+<div class="card" style="width: auto;">
     <div class="card-body">
-        <h5 id="msg" class="card-title">Introduce el año desde donde viene el mensaje del futuro</h5>
+        <h5 id="msg" class="card-title"><!-- cargado por js --></h5>
         <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-secondary" id="0" value="0" onclick="darNumero('0')">0</button>
-                <button type="button" class="btn btn-outline-secondary" id="1" value="1" onclick="darNumero('1')">1</button>
-                <button type="button" class="btn btn-outline-secondary" id="2" value="2" onclick="darNumero('2')">2</button>
-                <button type="button" class="btn btn-outline-secondary" id="3" value="3" onclick="darNumero('3')">3</button>
-                <button type="button" class="btn btn-outline-secondary" id="4" value="4" onclick="darNumero('4')">4</button>
-                <button type="button" class="btn btn-outline-secondary" id="5" value="5" onclick="darNumero('5')">5</button>
-                <button type="button" class="btn btn-outline-secondary" id="6" value="6" onclick="darNumero('6')">6</button>
-                <button type="button" class="btn btn-outline-secondary" id="7" value="7" onclick="darNumero('7')">7</button>
-                <button type="button" class="btn btn-outline-secondary" id="8" value="8" onclick="darNumero('8')">8</button>
-                <button type="button" class="btn btn-outline-secondary" id="9" value="9" onclick="darNumero('9')">9</button>
+            <div id="botonera" class="btn-group me-2" role="group" aria-label="First group">
+                <!-- cargado por js -->
             </div>
         </div>
         <h5 class="card-title">Respuesta:
-            <span id="respuesta1" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>
-            <span id="respuesta2" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>
-            <span id="respuesta3" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>
-            <span id="respuesta4" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>
+            <div id="botonerarespuesta" class="card-title">
+                <!-- cargado por js -->
+            </div>
         </h5>
         <h5 class="card-title">Retos Conseguidos:</h5>
         <h5 class="card-title">
@@ -65,8 +55,6 @@
             <span id="reto2" class=" btn btn-outline-secondary">2</span>
             <span id="reto3" class=" btn btn-outline-secondary">3</span>
             <span id="reto4" class=" btn btn-outline-secondary">4</span>
-            <span id="reto5" class=" btn btn-outline-secondary">5</span>
-            <span id="reto6" class=" btn btn-outline-secondary">6</span>
         </h5>
     </div>
 </div>
@@ -99,6 +87,7 @@
 </div>
 </div>
 
+<script src="js/variables.js"></script>
 <script src="js/presentacion.js"></script>
 
 </body>

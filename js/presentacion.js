@@ -1,46 +1,57 @@
-var respuesta = "";
-var contador = 0;
+var _respuesta = "";
+var _contador = 0;
+var retoActual = 0;
 
+// calabera, reto conseguido
+var checkReto = '<i class="fas fa-skull-crossbones"></i>';
 var myVideo = document.getElementById('my-video');
 
-var videos = ['videos/presentacionInsta.mp4','videos/reto.mp4'];
-var botones = []
-var retoActual = 0;
-var respuestasCorrectas = ['3023','6666','5555','4444','3333'];
-var retoConseguido = ['0', '0', '0', '0', '0'];
-var msgRetos = ['Introduce el año del futuro, desde donde viene el mensaje','El número de la bestia','wuow','guau','yeah'];
-//'<i class="fas fa-check"></i>';
-var checkReto = '<i class="fas fa-skull-crossbones"></i>';
+// al cargar la pagina
+$(document).ready(actualizar(retoActual));
+
 function darNumero(numero){
-    respuesta = respuesta + numero;
-    contador++;
+    _respuesta = _respuesta + numero;
+    _contador++;
     // rellenamos la respuesta segun vayan pulsando los botones
-    $('#respuesta'+contador)[0].innerText = numero;
+    $('#respuesta'+_contador)[0].innerText = numero;
 
     // debug
-    console.log("Respuesta: " + respuesta + " contador: " + contador);
+    console.log("Respuesta: " + _respuesta + " contador: " + _contador);
 
-    if (contador>=4 && respuesta==respuestasCorrectas[retoActual]) {
+    if (_contador>=caracteresRespuesta[retoActual] && _respuesta==respuestasCorrectas[retoActual]) {
         // Respuesta Correcta
-        $('#feito').modal('show');
+        // $('#feito').modal('show');
         // check
         $('#reto'+retoActual)[0].innerHTML = checkReto;
         // sumamos uno al reto
-        retoActual = retoActual + 1;
-        // cargamos el video nuevo
-        myVideo.setAttribute('src', videos[retoActual])
-        // texto del reto
-        $('#msg')[0].innerHTML = msgRetos[retoActual];
-        // contador y respuesta a cero
-        contador = 0;
-        respuesta="";
-    } else if (contador>=4 && respuesta!=respuestasCorrectas[retoActual]){
+        retoActual = retoActual +1;
+        // actualizamos pagina para el siguiente reto
+        actualizar(retoActual);
+        _contador = 0;
+        _respuesta="";
+    } else if (_contador>=caracteresRespuesta[retoActual] && _respuesta!=respuestasCorrectas[retoActual]){
         $('#nonfeito').modal('show');
-        contador=0;
-        respuesta="";
+        // contador y respuesta a cero
+        _contador=0;
+        _respuesta="";
         // reseteamos la respuesta con '?'
-        for(var i=1; i<5; i++) {
+        for(var i=1; i<caracteresRespuesta[retoActual]+1; i++) {
             $('#respuesta'+i)[0].innerHTML='<i class="fas fa-question"></i>';
         }
     }
+}
+
+/**
+ * Actualizamos pagina, la descripción del reto, la botonera, la respuesta
+ * @param reto correspondiente
+ */
+function actualizar(reto){
+    // cargamos el video nuevo
+    myVideo.setAttribute('src', videos[reto])
+    // texto del reto
+    $('#msg')[0].innerHTML = msgRetos[reto];
+    // botonera del reto
+    $('#botonera')[0].innerHTML = botonera[reto];
+    // contador y respuesta a cero
+    $('#botonerarespuesta')[0].innerHTML = botoneraRespuesta[reto];
 }
