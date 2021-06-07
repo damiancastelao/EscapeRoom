@@ -9,18 +9,41 @@ var myVideo = document.getElementById('my-video');
 // al cargar la pagina
 $(document).ready(actualizar(retoActual));
 
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e8; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+            break;
+        }
+    }
+}
+
 function darNumero(numero){
     _respuesta = _respuesta + numero;
     _contador++;
     // rellenamos la respuesta segun vayan pulsando los botones
     $('#respuesta'+_contador)[0].innerText = numero;
 
-    // debug
-    console.log("Respuesta: " + _respuesta + " contador: " + _contador);
-
     if (_contador>=caracteresRespuesta[retoActual] && _respuesta==respuestasCorrectas[retoActual]) {
+
+        // conexion via mqtt
+
+        // debug
+        console.log("Respuesta: " + _respuesta + " contador: " + _contador);
+
+        for (var i=1; i<8; i++) {
+            // mqtt
+            message = new Messaging.Message("ON");
+            message.destinationName = "cmnd/tasmota/POWER" + i;
+            client.send(message);
+            sleep(2000);
+            message = new Messaging.Message("OFF");
+            message.destinationName = "cmnd/tasmota/POWER" + i;
+            client.send(message);
+        }
         // Respuesta Correcta
-        // $('#feito').modal('show');
+        $('#feito').modal('show');
+
         // check
         $('#reto'+retoActual)[0].innerHTML = checkReto;
         // TODO Hacemos rodar los engranajes
@@ -42,11 +65,9 @@ function darNumero(numero){
  * @param reto correspondiente
  */
 function actualizar(reto){
-    // cargamos el video nuevo
-    myVideo.setAttribute('src', videos[reto]);
-    myVideo.setAttribute('poster', 'images/'+retoActual+'.png');
+    // no hai video
     // texto del reto
-    $('#msg')[0].innerHTML = msgRetos[reto];
+    $('#msg')[0].innerHTML = 'Ano da publicación:';
     // botonera del reto
     $('#botonera')[0].innerHTML = botonera[reto];
     // contador y respuesta a cero

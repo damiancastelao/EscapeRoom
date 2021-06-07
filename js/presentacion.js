@@ -20,7 +20,7 @@ function darNumero(numero){
 
     if (_contador>=caracteresRespuesta[retoActual] && _respuesta==respuestasCorrectas[retoActual]) {
         // Respuesta Correcta
-        // $('#feito').modal('show');
+        $('#feito').modal('show');
         // check
         $('#reto'+retoActual)[0].innerHTML = checkReto;
         // sumamos uno al reto

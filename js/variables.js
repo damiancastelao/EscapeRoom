@@ -1,4 +1,4 @@
-var videos = ['videos/presentacion.mp4','','','',''];
+var videos = ['videos/repair.mp4','videos/ing.mp4','videos/soci.mp4','videos/comu.mp4','videos/xela.mp4'];
 
 var botonesNumeros =
     '<button type="button" class="btn btn-outline-secondary" id="0" value="0" onclick="darNumero(\'0\')">0</button>\n' +
@@ -67,7 +67,13 @@ var botoneraRespuesta = [
 
 var msgRetos = [
     'Introduce Repair Code System ',
-    'Importante! Seguide a orde dos ingredientes... ',
+    'Importante! Seguide a orde dos ingredientes... <br>1 Leite - ' +
+    '2 chocolate en pó - ' +
+    '3 ovos - ' +
+    '4 mantequilla - ' +
+    '5 azucre - ' +
+    '6 fariña de trigo - ' +
+    '7 POISON',
     'O calendario AZTECA chámase... ',
     'Data de nacemento do/a autor/a máis novo/a',
     'Cando atopedes a peza do puzzle, vestídevos de pirata,<br> collede a bandeira e dirixídevos á illa Lucernario.<br> O tesouro vos agarda!\n'
