@@ -26,7 +26,7 @@ var botonera = [
     '<button type="button" class="btn btn-outline-secondary" id="8" onclick="darNumero(\'l\')">l</button>\n' +
     '<button type="button" class="btn btn-outline-secondary" id="9" onclick="darNumero(\'r\')">r</button>',
     botonesNumeros,
-    botonesNumeros,
+    botonesNumeros
 ];
 
 var botoneraRespuesta = [
@@ -62,7 +62,7 @@ var botoneraRespuesta = [
     '<span id="respuesta1" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>' +
     '<span id="respuesta2" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>' +
     '<span id="respuesta3" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>' +
-    '<span id="respuesta4" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>'
+    '<span id="respuesta4" class=" btn btn-outline-secondary"><i class="fas fa-question"></i></span>',
 ];
 
 var msgRetos = [

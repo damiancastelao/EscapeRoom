@@ -49,6 +49,11 @@ function actualizar(reto){
     // cargamos el video nuevo
     myVideo.setAttribute('src', videos[reto]);
     myVideo.setAttribute('poster', 'images/'+retoActual+'.png');
+    // en el ultimo reto no ponemos la seccion respuesta, es en ultimo.html
+    if (retoActual == 4) {
+        $('#labelRespuesta').hide();
+        $('#botonera').hide();
+    }
     // texto del reto
     $('#msg')[0].innerHTML = msgRetos[reto];
     // botonera del reto
